@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+		// var 
+		function esVar() {
+			var name = 'Pratik';
+
+			if(true) {
+				var name = 'Not Pratik';
+				console.log(`Name is ${name}`); // Name is Not Pratik
+			}
+			console.log(`Name is ${name}`); // Name is Not Pratik
+		}
+
+		// let
+		function esLet() {
+			let name = 'Pratik';
+
+			if(true) {
+				let name = 'Not Pratik';
+				console.log(`Name is ${name}`); // Name is Not Pratik
+			}
+			console.log(`Name is ${name}`);  // Name is Pratik
+		}
+
+		//const
+		function esConst() {
+			const name = 'Pratik';
+
+			if(true) {
+				const name = 'Not Pratik';
+				console.log(`Name is ${name}`); // Name is Not Pratik
+			}
+
+			name = 'Not Pratik';
+			console.log(`Name is ${name}`); // Uncaught TypeError: Assignment to constant variable.
+		}
+	</script>
+</head>
+<body>
+    <h1>ES6 Variables</h1>
+</body>
+</html>
