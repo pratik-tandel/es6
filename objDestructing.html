@@ -5,14 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
 		<script>
+			/** Object Destructing **/
 			let user = {
-        name: 'Pratik',
-        age: 22
-    	}
+				name: 'Pratik',
+				age: 22,
+				email: 'paikt@gmail.com',
+				city: 'Valsaad'
+			}
 
-			let {name, age} = user;
+			let user2 = {
+				name: 'Pratik',
+				age: 22,
+				email: 'paikt@gmail.com',
+				city: 'Surat'
+			}
+
+			let {name, age, email, city} = user;
 			
-			console.log(`Name: ${name}, Age: ${age}`);
+			// console.log(`Name: ${name}, Age: ${age}`);
+			// console.log(city);
+
+			/** Array Destructuring **/
+			const arr = [1, 3, 5];
+			let [a, b, c] = arr
+			console.log(a, c);
 		</script>
 </head>
 <body>
