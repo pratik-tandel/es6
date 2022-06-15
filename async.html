@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /** setTimeout & setInterval **/
+    function sayHello() {
+      console.log('Hello');
+    }
+
+    // setTimeout(sayHello, 5000);
+    // setTimeout(() => console.log('Set Timeout with Arrow'), 3000);
+
+    // setInterval(() => console.log('setInterval'), 2000);
+
+    /** Promise **/
+    // const myPromise = new Promise((resolve, reject) => {
+    //   // setTimeout(() => {
+    //   //   resolve('Data returned in Resolve');
+    //   // }, 2000);
+    //   // setTimeout(() => {
+    //   //   reject('Error returned in Reject');
+    //   // }, 3000);
+
+    //   let num;
+
+    //   setTimeout(() => {
+    //     num = 100;
+    //     if (num > 10) {
+    //       resolve('Data returned in Resolve');
+    //     } else {
+    //       reject(new Error('Error returned in Reject'));
+    //     }
+    //   }, 3000);
+    // });
+
+    // myPromise
+    //   .then((data) => {
+    //     console.log(data);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   })
+    //   .finally(() => {
+    //     console.log('Finally called');
+    //   })
+
+
+    /** Async - Await **/
+    // async function alertUser() {
+    //   let promise = new Promise((resolve, reject) => {
+    //     setTimeout(() => resolve("done!"), 3000)
+    //   });
+
+    //   let result = await promise; // wait until the promise resolves (*)
+
+    //   alert(result); // "done!"
+    // }
+
+    // alertUser(100);
+
+    /*** **/
+    async function checkNum(num) {
+      let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (num > 10) {
+            resolve('greater than 10')
+          } else {
+            reject('not greater than 10')
+          }
+        }, 3000);
+      });
+
+      let result = await promise; // wait until the promise resolves (*)
+
+      alert(result); // "done!"
+    }
+
+    checkNum(10);
+  </script>
+</head>
+
+<body>
+  <h1>Async Examples</h1>
+</body>
+
+</html>
